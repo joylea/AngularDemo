@@ -1,0 +1,54 @@
+<div class="row">
+  <label class="col-xs-2 control-label">Hello {{ this.userName }},</label>
+  <div class="col-xs-4">
+    <label class="testCSS">Test CSS</label>
+  </div>
+  <div class="col-xs-2">
+  </div>
+  <div class="col-xs-4">
+    <button type="button" class="btn btn-primary" (click)="logout()">
+      Logout
+    </button>
+  </div>
+</div>
+<div class="row">
+          <label class="col-xs-2 control-label" for="listFilter">Employee ID Filter:</label>
+          <div class="col-xs-4">
+            <input type="text" class="form-control" id="listFilter" name="listFilter" [(ngModel)]="listFilter" #filter="ngModel">
+          </div>
+          <div class="col-xs-2">
+          </div>
+          <div class="col-xs-4">
+          </div>
+        </div>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th style="width:50px">
+        &nbsp;
+      </th>
+      <th style="width:150px">Employee ID</th>
+      <th style="width:150px">Email Address</th>
+      <th style="width:150px">Role</th>
+      <th style="width:150px">First Name</th>
+      <th style="width:150px">Middle Name</th>
+      <th style="width:150px">Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor='let user of users | userFilter:listFilter; let i = index'>
+      <td style="width:50px">
+        &nbsp;<input type="radio" (change)="onSelectedUserChange(user, i)" name="user{{i}}"
+                     [checked]="selectedUserRow===i">
+      </td>
+      <td style="width:150px">{{user.employeeId}}</td>
+      <td style="width:150px">{{user.emailAddress}}</td>
+      <td style="width:150px">{{user.roleType}}</td>
+      <td style="width:150px">{{user.firstName}}</td>
+      <td style="width:150px">{{user.middleName}}</td>
+      <td style="width:150px">{{user.lastName}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
