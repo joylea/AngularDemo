@@ -31,21 +31,21 @@ export class UserPageComponent implements OnInit {
       firstName: 'aa',
       middleName: '',
       lastName: 'aaa',
-      emailAddress: 'aa.aaa@Aon.com',
+      emailAddress: 'aa.aaa@aaa.com',
       roleType: 'Admin'
     }, {
       employeeId: '222',
       firstName: 'bb',
       middleName: '',
       lastName: 'bbb',
-      emailAddress: 'bb.bbb@Aon.com',
+      emailAddress: 'bb.bbb@bbb.com',
       roleType: 'User'
     }, {
       employeeId: '123',
       firstName: 'ccc',
       middleName: '',
       lastName: 'cc',
-      emailAddress: 'ccc.cc@Aon.com',
+      emailAddress: 'ccc.cc@ccc.com',
       roleType: 'Admin'
     }];
     this.userDetail = this.users[0];
